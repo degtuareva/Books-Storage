@@ -1,0 +1,86 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    margin: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+table {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto 30px;
+    border-collapse: collapse;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+thead tr {
+    background-color: #3498db;
+    color: white;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f4f7fb;
+}
+
+tbody tr:hover {
+    background-color: #d6eaff;
+    transition: background-color 0.3s ease;
+}
+
+a {
+    color: #2980b9;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 4px;
+    background-color: #ecf4fc;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: inline-block;
+}
+
+a:hover {
+    background-color: #2980b9;
+    color: white;
+}
+
+.add-book-link {
+    display: block;
+    max-width: 150px;
+    margin: 0 auto;
+    padding: 12px 0;
+    background-color: #27ae60;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 25px;
+    box-shadow: 0 3px 7px rgba(39, 174, 96, 0.4);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.add-book-link:hover {
+    background-color: #1e8449;
+    box-shadow: 0 5px 14px rgba(30, 132, 73, 0.7);
+}

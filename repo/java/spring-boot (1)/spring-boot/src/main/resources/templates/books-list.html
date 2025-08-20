@@ -36,7 +36,7 @@
         if (confirm('Вы уверены, что хотите удалить эту книгу?')) {
             const bookId = element.getAttribute('data-id');
             fetch('/delete/' + bookId, {
-                method: 'POST' // используйте POST, если у вас в контроллере так
+                method: 'POST'
             })
                 .then(response => {
                     if (response.ok) {

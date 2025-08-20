@@ -21,9 +21,35 @@
         <td th:text="${book.author}">
         <td th:text="${book.pages}">
         <td><a th:href="@{'/edit-form/'+${book.id}}">Edit</a></td>
-        <td><a th:href="@{'/delete/'+${book.id}}">Delete</a></td>
+<!--        <td><a th:href="@{'/delete/'+${book.id}}">Delete</a></td>-->
+        <td>
+            <a href="javascript:void(0);"
+               th:attr="data-id=${book.id}"
+               onclick="confirmDelete(this)"
+               style="color: red; cursor: pointer;">Delete</a>
+        </td>
     </tr>
 </table>
 <a href="/create-form" class="add-book-link">Add a book</a>
+<script>
+    function confirmDelete(element) {
+        if (confirm('Вы уверены, что хотите удалить эту книгу?')) {
+            const bookId = element.getAttribute('data-id');
+            fetch('/delete/' + bookId, {
+                method: 'POST' // используйте POST, если у вас в контроллере так
+            })
+                .then(response => {
+                    if (response.ok) {
+                        alert('Книга успешно удалена');
+                        location.reload();
+                    } else {
+                        alert('Ошибка при удалении книги');
+                    }
+                })
+                .catch(error => alert('Ошибка: ' + error));
+        }
+    }
+</script>
+
 </body>
 </html>

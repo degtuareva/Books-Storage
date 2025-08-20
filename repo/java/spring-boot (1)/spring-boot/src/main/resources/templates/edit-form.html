@@ -1,0 +1,30 @@
+<html>
+<head>
+    <title>Create Book</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<form method="post" action="/update">
+    <input type="hidden"
+           name="id"
+           th:value="${book.id}"
+    />
+
+    <input type="text"
+           name="name"
+           placeholder="Book name"
+    th:value="${book.name}"/>
+    <input type="text"
+           name="author"
+           placeholder="Book author"
+    th:value="${book.author}"/>
+    <input type="text"
+           name="pages"
+           placeholder="Numbers of pages"
+    th:value="${book.pages}"/>
+
+    <input type="submit"/>
+
+</form>
+</body>
+</html>

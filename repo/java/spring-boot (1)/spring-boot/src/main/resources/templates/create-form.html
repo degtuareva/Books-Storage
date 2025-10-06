@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <head>
     <title>Create Book</title>
@@ -5,18 +6,22 @@
 </head>
 <body>
 <form method="post" action="/create">
-            <input type="text"
-                   name="name"
-                   placeholder="Book name"/>
-            <input type="text"
-                   name="author"
-                   placeholder="Book author"/>
-            <input type="text"
-                   name="pages"
-                   placeholder="Numbers of pages"/>
-
-        <input type="submit"/>
-
+    <label>
+        Name<br>
+        <input type="text" name="name" placeholder="Book name" required>
+    </label>
+    <br>
+    <label>
+        Author<br>
+        <input type="text" name="author" placeholder="Book author" required>
+    </label>
+    <br>
+    <label>
+        Pages<br>
+        <input type="number" name="pages" placeholder="Number of pages" required>
+    </label>
+    <br>
+    <input type="submit" value="Add Book">
 </form>
 </body>
 </html>

@@ -1,7 +1,7 @@
-
+<!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8"/>
     <title>Books List</title>
     <link rel="stylesheet" href="/styles.css"/>
 </head>
@@ -15,13 +15,13 @@
         <th></th>
         <th></th>
     </tr>
+    <tr th:each="book : ${books}">
 
-    <tr th:each="book: ${books}">
-        <td th:text="${book.name}">
-        <td th:text="${book.author}">
-        <td th:text="${book.pages}">
-        <td><a th:href="@{'/edit-form/'+${book.id}}">Edit</a></td>
-<!--        <td><a th:href="@{'/delete/'+${book.id}}">Delete</a></td>-->
+
+        <td th:text="${book.name}"></td>
+        <td th:text="${book.author}"></td>
+        <td th:text="${book.pages}"></td>
+        <td><a th:href="@{'/edit-form/' + ${book.id}}">Edit</a></td>
         <td>
             <a href="javascript:void(0);"
                th:attr="data-id=${book.id}"
@@ -50,6 +50,5 @@
         }
     }
 </script>
-
 </body>
 </html>

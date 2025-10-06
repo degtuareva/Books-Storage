@@ -1,19 +1,19 @@
-package com.greatbit.models;
+package com.greatbit.model;
 
 public class Book {
     private String id;
+    private int pages;
     private String name;
     private String author;
-    private int pages;
 
     public Book() {
     }
 
-    public Book(String id, String name, String author, int pages) {
+    public Book(String id, int pages, String name, String author) {
         this.id = id;
+        this.pages = pages;
         this.name = name;
         this.author = author;
-        this.pages = pages;
     }
 
     public String getId() {
@@ -22,6 +22,14 @@ public class Book {
 
     public void setId(String id) {
         this.id = id;
+    }
+
+    public int getPages() {
+        return pages;
+    }
+
+    public void setPages(int pages) {
+        this.pages = pages;
     }
 
     public String getName() {
@@ -40,11 +48,13 @@ public class Book {
         this.author = author;
     }
 
-    public int getPages() {
-        return pages;
-    }
-
-    public void setPages(int pages) {
-        this.pages = pages;
+    @Override
+    public String toString() {
+        return "Book{" +
+                "id='" + id + '\'' +
+                ", pages=" + pages +
+                ", name='" + name + '\'' +
+                ", author='" + author + '\'' +
+                '}';
     }
 }
